@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <!-- PRELOADER -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">MELL</div>
+            <div class="preloader-sub">KOMPRESÖR</div>
+            <div class="preloader-bar">
+                <div class="preloader-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-fan"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">MELL</span>
+                    <span class="logo-sub">KOMPRESÖR</span>
+                </div>
+            </a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#anasayfa" class="nav-link">Ana Sayfa</a></li>
+                <li><a href="#hakkimizda" class="nav-link">Hakkımızda</a></li>
+                <li><a href="#urunler" class="nav-link">Ürünler</a></li>
+                <li><a href="#hizmetler" class="nav-link">Hizmetler</a></li>
+                <li><a href="#referanslar" class="nav-link">Referanslar</a></li>
+                <li><a href="#iletisim" class="nav-link">İletişim</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="tel:+902125550000" class="nav-phone">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+90 212 555 00 00</span>
+                </a>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="anasayfa">
+        <div class="hero-bg">
+            <div class="hero-particles" id="particles"></div>
+            <div class="hero-gradient"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-award"></i>
+                <%= company.founded %>'den Beri Güvenilir Çözüm Ortağınız
+            </div>
+            
+            <h1 class="hero-title">
+                Endüstriyel Hava<br>
+                <span class="text-gradient">Gücünüzü</span> Artırın
+            </h1>
+            
+            <p class="hero-desc">
+                Vidalı, pistonlu ve scroll kompresör sistemleriyle üretiminizi 
+                kesintisiz sürdürün. Türkiye'nin lider kompresör üreticisi.
+            </p>
+            
+            <div class="hero-buttons">
+                <a href="#urunler" class="btn btn-primary">
+                    <i class="fas fa-cogs"></i> Ürünleri İncele
+                </a>
+                <a href="#iletisim" class="btn btn-outline">
+                    <i class="fas fa-headset"></i> Teklif Al
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Aşağı Kaydır</span>
+        </div>
+
+        <div class="hero-stats">
+            <div class="h-stat">
+                <span class="h-number" data-count="26">0</span>
+                <span class="h-label">Yıllık Tecrübe</span>
+            </div>
+            <div class="h-stat">
+                <span class="h-number" data-count="15000">0</span>
+                <span class="h-label">Satılan Ünite</span>
+            </div>
+            <div class="h-stat">
+                <span class="h-number" data-count="48">0</span>
+                <span class="h-label">Ülkeye İhracat</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES BAR -->
+    <section class="features-bar">
+        <div class="f-container">
+            <div class="f-item">
+                <div class="f-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="f-text">
+                    <h4>5 Yıl Garanti</h4>
+                    <p>Tüm ürünlerde</p>
+                </div>
+            </div>
+            <div class="f-item">
+                <div class="f-icon"><i class="fas fa-tools"></i></div>
+                <div class="f-text">
+                    <h4>7/24 Servis</h4>
+                    <p>Yerinde destek</p>
+                </div>
+            </div>
+            <div class="f-item">
+                <div class="f-icon"><i class="fas fa-leaf"></i></div>
+                <div class="f-text">
+                    <h4>Enerji Verimli</h4>
+                    <p>%40 tasarruf</p>
+                </div>
+            </div>
+            <div class="f-item">
+                <div class="f-icon"><i class="fas fa-certificate"></i></div>
+                <div class="f-text">
+                    <h4>ISO Sertifikalı</h4>
+                    <p>Kalite standartları</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="hakkimizda">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-images">
+                    <div class="about-img-main">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80" alt="MELL Fabrika">
+                        <div class="about-experience">
+                            <span class="exp-number">26+</span>
+                            <span class="exp-text">YIL<br>TECRÜBE</span>
+                        </div>
+                    </div>
+                    <div class="about-img-secondary">
+                        <img src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=600&q=80" alt="Kompresör Üretimi">
+                    </div>
+                </div>
+                
+                <div class="about-content">
+                    <span class="section-tag">Hakkımızda</span>
+                    <h2 class="section-title">
+                        Endüstriyel Hava<br>
+                        <span class="highlight">Teknolojisinin</span> Öncüsü
+                    </h2>
+                    <p class="section-desc">
+                        <%= company.name %>, <%= company.founded %> yılından bu yana endüstriyel 
+                        kompresör sistemleri üretimi ve satışı alanında faaliyet göstermektedir.
+                    </p>
+                    <p class="section-desc">
+                        15.000'den fazla satılan ünite ve 48 ülkeye ihracat ile Türkiye'nin 
+                        kompresör sektöründeki lider markasıyız.
+                    </p>
+                    
+                    <div class="about-features">
+                        <div class="a-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>TSE ve CE Belgeli Üretim</span>
+                        </div>
+                        <div class="a-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Özel Proje Çözümleri</span>
+                        </div>
+                        <div class="a-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Yedek Parça Garantisi</span>
+                        </div>
+                        <div class="a-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Yerinde Montaj & Eğitim</span>
+                        </div>
+                    </div>
+
+                    <a href="#iletisim" class="btn btn-primary">
+                        <i class="fas fa-arrow-right"></i> Daha Fazla Bilgi
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <section class="products" id="urunler">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Ürünlerimiz</span>
+                <h2 class="section-title">
+                    Kompresör <span class="highlight">Çözümlerimiz</span>
+                </h2>
+                <p class="section-desc">
+                    Her sektöre ve ihtiyaca uygun geniş ürün yelpazemiz
+                </p>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card" onclick="openProductModal('vidali')">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1619641248387-2e9a7d8e4e0e?w=600&q=80" alt="Vidalı Kompresör">
+                        <div class="product-overlay">
+                            <div class="product-view"><i class="fas fa-expand"></i></div>
+                        </div>
+                        <div class="product-badge">EN ÇOK TERCİH</div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Endüstriyel</span>
+                        <h3>Vidalı Kompresörler</h3>
+                        <p>7.5 HP'den 500 HP'ye kadar yağsız ve yağlı vidalı kompresör sistemleri.</p>
+                        <div class="product-specs">
+                            <span><i class="fas fa-tachometer-alt"></i> 7.5 - 500 HP</span>
+                            <span><i class="fas fa-wind"></i> 0.8 - 13 bar</span>
+                        </div>
+                        <span class="product-link">İncele <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="openProductModal('pistonlu')">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=600&q=80" alt="Pistonlu Kompresör">
+                        <div class="product-overlay">
+                            <div class="product-view"><i class="fas fa-expand"></i></div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Profesyonel</span>
+                        <h3>Pistonlu Kompresörler</h3>
+                        <p>Atölye ve küçük ölçekli üretimler için ekonomik pistonlu kompresörler.</p>
+                        <div class="product-specs">
+                            <span><i class="fas fa-tachometer-alt"></i> 2 - 20 HP</span>
+                            <span><i class="fas fa-wind"></i> 8 - 12 bar</span>
+                        </div>
+                        <span class="product-link">İncele <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="openProductModal('scroll')">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80" alt="Scroll Kompresör">
+                        <div class="product-overlay">
+                            <div class="product-view"><i class="fas fa-expand"></i></div>
+                        </div>
+                        <div class="product-badge green">YENİ</div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Medikal / Gıda</span>
+                        <h3>Scroll Kompresörler</h3>
+                        <p>%100 yağsız hava üreten, medikal ve gıda sektörüne özel scroll sistemler.</p>
+                        <div class="product-specs">
+                            <span><i class="fas fa-tachometer-alt"></i> 3 - 30 HP</span>
+                            <span><i class="fas fa-wind"></i> Sınıf 0</span>
+                        </div>
+                        <span class="product-link">İncele <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="openProductModal('kurutucu')">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80" alt="Hava Kurutucu">
+                        <div class="product-overlay">
+                            <div class="product-view"><i class="fas fa-expand"></i></div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Aksesuar</span>
+                        <h3>Hava Kurutucuları</h3>
+                        <p>Soğutmalı ve adsorpsiyon kurutucular ile basınçlı hava kalitesini artırın.</p>
+                        <div class="product-specs">
+                            <span><i class="fas fa-tachometer-alt"></i> 10 - 5000 m³/h</span>
+                            <span><i class="fas fa-wind"></i> -70°C PDP</span>
+                        </div>
+                        <span class="product-link">İncele <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="openProductModal('tank')">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&q=80" alt="Hava Tankı">
+                        <div class="product-overlay">
+                            <div class="product-view"><i class="fas fa-expand"></i></div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Aksesuar</span>
+                        <h3>Basınçlı Hava Tankları</h3>
+                        <p>CE sertifikalı, galvanizli ve boyalı basınçlı hava tankları.</p>
+                        <div class="product-specs">
+                            <span><i class="fas fa-tachometer-alt"></i> 100 - 10.000 L</span>
+                            <span><i class="fas fa-wind"></i> 11 - 16 bar</span>
+                        </div>
+                        <span class="product-link">İncele <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="openProductModal('filtre')">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&q=80" alt="Hava Filtresi">
+                        <div class="product-overlay">
+                            <div class="product-view"><i class="fas fa-expand"></i></div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Aksesuar</span>
+                        <h3>Hava Filtreleri</h3>
+                        <p>Partikül, aktif karbon ve mikro filtreler ile hava kalitesi garantisi.</p>
+                        <div class="product-specs">
+                            <span><i class="fas fa-tachometer-alt"></i> 0.01 μm</span>
+                            <span><i class="fas fa-wind"></i> Sınıf 1.2.1</span>
+                        </div>
+                        <span class="product-link">İncele <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services" id="hizmetler">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Hizmetlerimiz</span>
+                <h2 class="section-title">
+                    Size Nasıl <span class="highlight">Yardımcı</span> Oluruz?
+                </h2>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-box">
+                    <div class="service-icon-box"><i class="fas fa-search"></i></div>
+                    <h3>Ücretsiz Keşif</h3>
+                    <p>Tesisinize gelerek ihtiyaç analizi yapıyor, en uygun kompresör sistemini belirliyoruz.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Yerinde teknik inceleme</li>
+                        <li><i class="fas fa-check"></i> Hava tüketim analizi</li>
+                        <li><i class="fas fa-check"></i> Sistem tasarımı</li>
+                    </ul>
+                </div>
+
+                <div class="service-box">
+                    <div class="service-icon-box"><i class="fas fa-wrench"></i></div>
+                    <h3>Kurulum & Devreye Alma</h3>
+                    <p>Profesyonel ekibimizle montaj, borulama ve devreye alma işlemlerini gerçekleştiriyoruz.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Montaj ve borulama</li>
+                        <li><i class="fas fa-check"></i> Elektrik bağlantıları</li>
+                        <li><i class="fas fa-check"></i> Performans testi</li>
+                    </ul>
+                </div>
+
+                <div class="service-box">
+                    <div class="service-icon-box"><i class="fas fa-tools"></i></div>
+                    <h3>7/24 Bakım & Onarım</h3>
+                    <p>Düzenli bakım programları ve acil durum müdahale ekibimizle kesintisiz üretim garantisi.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Periyodik bakım</li>
+                        <li><i class="fas fa-check"></i> Yedek parça temini</li>
+                        <li><i class="fas fa-check"></i> Acil müdahale</li>
+                    </ul>
+                </div>
+
+                <div class="service-box">
+                    <div class="service-icon-box"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Eğitim & Danışmanlık</h3>
+                    <p>Operatör eğitimleri ve enerji verimliliği danışmanlığı ile maliyetlerinizi düşürün.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Operatör eğitimi</li>
+                        <li><i class="fas fa-check"></i> Enerji verimliliği</li>
+                        <li><i class="fas fa-check"></i> Teknik destek</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="cta-bg">
+            <div class="cta-pattern"></div>
+        </div>
+        <div class="cta-content">
+            <h2>Hemen Teklif Alın</h2>
+            <p>Size özel çözüm ve fiyatlandırma için uzman ekibimizle görüşün.</p>
+            <div class="cta-buttons">
+                <a href="tel:+902125550000" class="btn btn-white">
+                    <i class="fas fa-phone-alt"></i> Hemen Ara
+                </a>
+                <a href="#iletisim" class="btn btn-outline-white">
+                    <i class="fas fa-envelope"></i> Form Doldur
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- REFERENCES SECTION -->
+    <section class="references" id="referanslar">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Referanslar</span>
+                <h2 class="section-title">
+                    Bizi <span class="highlight">Tercih Edenler</span>
+                </h2>
+            </div>
+
+            <div class="ref-logos">
+                <div class="ref-logo"><i class="fas fa-industry"></i><span>OTOMOTİV A.Ş.</span></div>
+                <div class="ref-logo"><i class="fas fa-flask"></i><span>KİMYA GRUP</span></div>
+                <div class="ref-logo"><i class="fas fa-ship"></i><span>TERSANE LTD.</span></div>
+                <div class="ref-logo"><i class="fas fa-hospital"></i><span>MEDİKAL HAST.</span></div>
+                <div class="ref-logo"><i class="fas fa-utensils"></i><span>GIDA ÜRETİM</span></div>
+                <div class="ref-logo"><i class="fas fa-tshirt"></i><span>TEKSTİL A.Ş.</span></div>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"MELL kompresörleri 3 yıldır kullanıyoruz. Hiçbir arıza yaşamadık. Enerji tasarrufu sayesinde yatırımımızı 18 ayda amorti ettik."</p>
+                    <div class="testimonial-author">
+                        <div class="t-avatar">MY</div>
+                        <div class="t-info">
+                            <h4>Mehmet Yıldız</h4>
+                            <p>Üretim Müdürü, Otomotiv A.Ş.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"7/24 servis hizmetleri gerçekten mükemmel. Gece yarısı yaşadığımız arızaya 45 dakikada müdahale ettiler."</p>
+                    <div class="testimonial-author">
+                        <div class="t-avatar">AK</div>
+                        <div class="t-info">
+                            <h4>Ayşe Kaya</h4>
+                            <p>Tesis Müdürü, Gıda Üretim</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Scroll kompresör sayesinde gıda üretimimizde %100 yağsız hava garantisi aldık. MELL kalitesi tartışılmaz."</p>
+                    <div class="testimonial-author">
+                        <div class="t-avatar">CD</div>
+                        <div class="t-info">
+                            <h4>Can Demir</h4>
+                            <p>Kalite Müdürü, Unilever Tedarikçisi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="iletisim">
+        <div class="section-container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-tag">İletişim</span>
+                    <h2 class="section-title">
+                        Bizimle <span class="highlight">İletişime</span> Geçin
+                    </h2>
+                    <p class="section-desc">
+                        Size özel çözümler ve fiyat teklifleri için formu doldurun veya doğrudan arayın.
+                    </p>
+
+                    <div class="contact-details">
+                        <div class="c-detail">
+                            <div class="c-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4>Fabrika & Merkez</h4>
+                                <p>İstanbul Organize Sanayi Bölgesi<br>2. Cadde No:45, Başakşehir/İstanbul</p>
+                            </div>
+                        </div>
+                        <div class="c-detail">
+                            <div class="c-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <h4>Telefon</h4>
+                                <p><%= company.phone %><br>+90 (212) 555 00 01</p>
+                            </div>
+                        </div>
+                        <div class="c-detail">
+                            <div class="c-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4>E-Posta</h4>
+                                <p><%= company.email %><br>satis@mellkompresor.com.tr</p>
+                            </div>
+                        </div>
+                        <div class="c-detail">
+                            <div class="c-icon"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <h4>Çalışma Saatleri</h4>
+                                <p>Pzt-Cuma: 08:30 - 18:00<br>Cmt: 09:00 - 13:00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-bar">
+                        <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" name="ad" placeholder=" " required>
+                                <label>Adınız Soyadınız *</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="sirket" placeholder=" ">
+                                <label>Şirket Adı</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder=" " required>
+                                <label>E-Posta Adresiniz *</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" name="telefon" placeholder=" " required>
+                                <label>Telefon Numaranız *</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <select name="konu" required>
+                                <option value="" disabled selected>Konu Seçin *</option>
+                                <option value="teklif">Fiyat Teklifi</option>
+                                <option value="servis">Servis Talebi</option>
+                                <option value="yedek">Yedek Parça</option>
+                                <option value="kurulum">Kurulum</option>
+                                <option value="diger">Diğer</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="mesaj" rows="5" placeholder=" " required></textarea>
+                            <label>Mesajınız *</label>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> GÖNDER
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAP SECTION -->
+    <div class="map-section">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.1!2d28.8!3d41.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDA3JzI0LjQiTiAyOMKwMDcnMjQuNCJF!5e0!3m2!1str!2str!4v1234567890123!5m2!1str!2str" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="f-logo-icon"><i class="fas fa-fan"></i></div>
+                        <div>
+                            <span class="f-logo-main">MELL</span>
+                            <span class="f-logo-sub">KOMPRESÖR</span>
+                        </div>
+                    </div>
+                    <p><%= company.founded %>'den beri endüstriyel kompresör sektöründe güvenilir çözüm ortağınız.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Hızlı Linkler</h4>
+                    <ul>
+                        <li><a href="#anasayfa">Ana Sayfa</a></li>
+                        <li><a href="#hakkimizda">Hakkımızda</a></li>
+                        <li><a href="#urunler">Ürünler</a></li>
+                        <li><a href="#hizmetler">Hizmetler</a></li>
+                        <li><a href="#iletisim">İletişim</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Ürünler</h4>
+                    <ul>
+                        <li><a href="#" onclick="openProductModal('vidali')">Vidalı Kompresörler</a></li>
+                        <li><a href="#" onclick="openProductModal('pistonlu')">Pistonlu Kompresörler</a></li>
+                        <li><a href="#" onclick="openProductModal('scroll')">Scroll Kompresörler</a></li>
+                        <li><a href="#" onclick="openProductModal('kurutucu')">Hava Kurutucuları</a></li>
+                        <li><a href="#" onclick="openProductModal('tank')">Basınçlı Tanklar</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>İletişim</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> <%= company.phone %></li>
+                        <li><i class="fas fa-envelope"></i> <%= company.email %></li>
+                        <li><i class="fas fa-map-marker-alt"></i> İstanbul, Türkiye</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© <%= new Date().getFullYear() %> <%= company.name %>. Tüm hakları saklıdır.</p>
+                <div class="footer-badges">
+                    <span><i class="fas fa-shield-alt"></i> ISO 9001</span>
+                    <span><i class="fas fa-certificate"></i> CE Belgeli</span>
+                    <span><i class="fas fa-leaf"></i> ISO 14001</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PRODUCT MODAL -->
+    <div class="modal-overlay" id="productModal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- SUCCESS TOAST -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Mesajınız gönderildi!</span>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
