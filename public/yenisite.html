@@ -3,16 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MELL KOMPRESÖR | Endüstriyel Hava Gücünün Zirvesi</title>
+    <title>MELL KOMPRESÖR | Endüstriyel Vidalı Hava Gücü</title>
     <meta name="description" content="Türkiye'nin lider vidalı kompresör üreticisi. 26 yıllık tecrübe, 5000+ satılan ünite, 48 ülkeye ihracat.">
     
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
@@ -80,11 +75,12 @@
 
         .preloader-logo {
             font-family: 'Playfair Display', serif;
-            font-size: 4rem;
-            font-weight: 700;
-            letter-spacing: 12px;
+            font-size: 5rem;
+            font-weight: 800;
+            letter-spacing: 15px;
             color: var(--white);
             position: relative;
+            overflow: hidden;
         }
 
         .preloader-logo::after {
@@ -93,9 +89,8 @@
             bottom: -10px;
             left: 0;
             width: 100%;
-            height: 3px;
+            height: 4px;
             background: linear-gradient(90deg, var(--primary), var(--gold));
-            transform: scaleX(0);
             animation: expandLine 2s ease forwards;
         }
 
@@ -105,20 +100,21 @@
 
         .preloader-sub {
             font-family: 'Montserrat', sans-serif;
-            font-size: 0.9rem;
-            letter-spacing: 8px;
+            font-size: 1rem;
+            letter-spacing: 10px;
             color: var(--gray);
-            margin-top: 20px;
+            margin-top: 25px;
             text-transform: uppercase;
+            font-weight: 600;
         }
 
         .preloader-counter {
             font-family: 'Playfair Display', serif;
-            font-size: 8rem;
-            font-weight: 700;
+            font-size: 10rem;
+            font-weight: 800;
             color: transparent;
             -webkit-text-stroke: 2px var(--primary);
-            margin-top: 40px;
+            margin-top: 50px;
             position: relative;
         }
 
@@ -348,7 +344,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
             transition: left 0.6s ease;
         }
 
@@ -472,6 +468,11 @@
             animation: spin 4s linear infinite;
         }
 
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
         .hero-title {
             font-family: 'Playfair Display', serif;
             font-size: 6rem;
@@ -497,6 +498,7 @@
         .hero-title .line:nth-child(1) span { animation-delay: 0.2s; }
         .hero-title .line:nth-child(2) span { animation-delay: 0.4s; }
         .hero-title .line:nth-child(3) span { animation-delay: 0.6s; }
+        .hero-title .line:nth-child(4) span { animation-delay: 0.8s; }
 
         @keyframes revealText {
             to { transform: translateY(0); opacity: 1; }
@@ -531,14 +533,14 @@
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            animation: fadeInUp 1s ease 0.8s both;
+            animation: fadeInUp 1s ease 1s both;
         }
 
         .hero-buttons {
             display: flex;
             gap: 25px;
             justify-content: center;
-            animation: fadeInUp 1s ease 1s both;
+            animation: fadeInUp 1s ease 1.2s both;
         }
 
         .btn {
@@ -601,17 +603,6 @@
             box-shadow: 0 20px 50px rgba(255, 107, 53, 0.2);
         }
 
-        .btn-gold {
-            background: linear-gradient(135deg, var(--gold), var(--gold-light));
-            color: var(--black);
-            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.3);
-        }
-
-        .btn-gold:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 25px 60px rgba(255, 215, 0, 0.5);
-        }
-
         .hero-scroll {
             position: absolute;
             bottom: 50px;
@@ -652,6 +643,21 @@
         @keyframes scrollWheel {
             0% { transform: translateY(0); opacity: 1; }
             100% { transform: translateY(20px); opacity: 0; }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-40px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         /* ===== FLOATING STATS ===== */
@@ -840,6 +846,10 @@
             position: relative;
             height: 320px;
             overflow: hidden;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .product-image img {
@@ -918,11 +928,11 @@
             color: var(--white);
         }
 
-        .product-info p {
+        .product-info > p {
             color: var(--gray);
             font-size: 1rem;
             line-height: 1.8;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         .product-specs {
@@ -967,23 +977,9 @@
             border-top: 1px solid var(--glass-border);
         }
 
-        .product-price {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--gold);
-        }
-
-        .product-price span {
-            font-size: 0.9rem;
-            color: var(--gray);
-            font-family: 'Inter', sans-serif;
-            font-weight: 400;
-        }
-
         .product-btn {
-            width: 50px;
-            height: 50px;
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
             background: linear-gradient(135deg, var(--primary), var(--gold));
             display: flex;
@@ -1452,6 +1448,28 @@
             display: flex;
             gap: 25px;
             justify-content: center;
+        }
+
+        .btn-white {
+            background: var(--white);
+            color: var(--black);
+        }
+
+        .btn-white:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .btn-outline-white {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-outline-white:hover {
+            background: var(--white);
+            color: var(--black);
+            transform: translateY(-5px);
         }
 
         /* ===== CONTACT ===== */
@@ -1945,7 +1963,7 @@
         }
 
         .modal-code-block::before {
-            content: 'TECHNICAL DATA';
+            content: 'TEKNİK VERİLER';
             position: absolute;
             top: -12px;
             left: 20px;
@@ -1969,6 +1987,7 @@
             display: flex;
             gap: 20px;
             margin-top: 30px;
+            align-items: center;
         }
 
         /* ===== TOAST ===== */
@@ -1999,17 +2018,6 @@
             font-size: 1.5rem;
         }
 
-        /* ===== ANIMATIONS ===== */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-40px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1200px) {
             .products-grid { grid-template-columns: repeat(2, 1fr); }
@@ -2027,7 +2035,7 @@
             .features-grid { grid-template-columns: 1fr; }
             .about-grid { grid-template-columns: 1fr; }
             .contact-grid { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 40px; }
             .floating-stats { flex-direction: column; align-items: center; }
             .f-stat:nth-child(2) { margin: 0; transform: none; }
             .cta-content h2 { font-size: 2.5rem; }
@@ -2070,9 +2078,9 @@
         </ul>
 
         <div class="nav-cta">
-            <a href="tel:+902125550000" class="nav-phone">
+            <a href="tel:+905423949885" class="nav-phone">
                 <i class="fas fa-phone-alt"></i>
-                <span>+90 212 555 00 00</span>
+                <span>+90 542 394 98 85</span>
             </a>
         </div>
     </nav>
@@ -2149,7 +2157,7 @@
         <div class="products-grid">
             <div class="product-card" data-aos="fade-up" data-aos-delay="100" onclick="openModal('vs15')">
                 <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1619641248387-2e9a7d8e4e0e?w=600&q=80" alt="VS-15">
+                    <img src="https://images.unsplash.com/photo-1619641248387-2e9a7d8e4e0e?w=600&q=80" alt="MELL VS-15 Vidalı Kompresör">
                     <div class="product-image-overlay"></div>
                     <div class="product-badge">Giriş Seviye</div>
                 </div>
@@ -2176,7 +2184,7 @@
                         </div>
                     </div>
                     <div class="product-action">
-                        <div class="product-price">₺89.900 <span>+KDV</span></div>
+                        <span style="color: var(--primary); font-weight: 700;">Detayları Gör</span>
                         <button class="product-btn">
                             <i class="fas fa-arrow-right"></i>
                         </button>
@@ -2186,7 +2194,7 @@
 
             <div class="product-card" data-aos="fade-up" data-aos-delay="200" onclick="openModal('vs30')">
                 <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=600&q=80" alt="VS-30">
+                    <img src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=600&q=80" alt="MELL VS-30 Vidalı Kompresör">
                     <div class="product-image-overlay"></div>
                     <div class="product-badge outline">ENERJİ VERİMLİ</div>
                 </div>
@@ -2213,7 +2221,7 @@
                         </div>
                     </div>
                     <div class="product-action">
-                        <div class="product-price">₺149.900 <span>+KDV</span></div>
+                        <span style="color: var(--primary); font-weight: 700;">Detayları Gör</span>
                         <button class="product-btn">
                             <i class="fas fa-arrow-right"></i>
                         </button>
@@ -2223,7 +2231,7 @@
 
             <div class="product-card" data-aos="fade-up" data-aos-delay="300" onclick="openModal('vs75')">
                 <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80" alt="VS-75">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80" alt="MELL VS-75 Vidalı Kompresör">
                     <div class="product-image-overlay"></div>
                     <div class="product-badge">EN ÇOK SATAN</div>
                 </div>
@@ -2250,7 +2258,7 @@
                         </div>
                     </div>
                     <div class="product-action">
-                        <div class="product-price">₺289.900 <span>+KDV</span></div>
+                        <span style="color: var(--primary); font-weight: 700;">Detayları Gör</span>
                         <button class="product-btn">
                             <i class="fas fa-arrow-right"></i>
                         </button>
@@ -2260,7 +2268,7 @@
 
             <div class="product-card" data-aos="fade-up" data-aos-delay="100" onclick="openModal('vs150')">
                 <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80" alt="VS-150">
+                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80" alt="MELL VS-150 Vidalı Kompresör">
                     <div class="product-image-overlay"></div>
                 </div>
                 <div class="product-info">
@@ -2286,7 +2294,7 @@
                         </div>
                     </div>
                     <div class="product-action">
-                        <div class="product-price">₺489.900 <span>+KDV</span></div>
+                        <span style="color: var(--primary); font-weight: 700;">Detayları Gör</span>
                         <button class="product-btn">
                             <i class="fas fa-arrow-right"></i>
                         </button>
@@ -2296,7 +2304,7 @@
 
             <div class="product-card" data-aos="fade-up" data-aos-delay="200" onclick="openModal('vs200')">
                 <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&q=80" alt="VS-200">
+                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&q=80" alt="MELL VS-200 Vidalı Kompresör">
                     <div class="product-image-overlay"></div>
                     <div class="product-badge outline">ÖZEL PROJE</div>
                 </div>
@@ -2323,7 +2331,7 @@
                         </div>
                     </div>
                     <div class="product-action">
-                        <div class="product-price">Teklif Alın</div>
+                        <span style="color: var(--primary); font-weight: 700;">Detayları Gör</span>
                         <button class="product-btn">
                             <i class="fas fa-arrow-right"></i>
                         </button>
@@ -2333,7 +2341,7 @@
 
             <div class="product-card" data-aos="fade-up" data-aos-delay="300" onclick="openModal('vs500')">
                 <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&q=80" alt="VS-500">
+                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&q=80" alt="MELL VS-500 Vidalı Kompresör">
                     <div class="product-image-overlay"></div>
                     <div class="product-badge">MEGA GÜÇ</div>
                 </div>
@@ -2360,7 +2368,7 @@
                         </div>
                     </div>
                     <div class="product-action">
-                        <div class="product-price">Teklif Alın</div>
+                        <span style="color: var(--primary); font-weight: 700;">Detayları Gör</span>
                         <button class="product-btn">
                             <i class="fas fa-arrow-right"></i>
                         </button>
@@ -2437,7 +2445,7 @@
         <div class="about-grid">
             <div class="about-visual" data-aos="fade-right">
                 <div class="about-image-main">
-                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80" alt="MELL Fabrika">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80" alt="MELL KOMPRESÖR Fabrika">
                 </div>
                 <div class="about-floating-card">
                     <span class="number">26+</span>
@@ -2521,7 +2529,7 @@
             <h2>Hemen Teklif Alın</h2>
             <p>Size özel vidalı kompresör çözümü ve fiyatlandırma için uzman ekibimizle görüşün.</p>
             <div class="cta-buttons">
-                <a href="tel:+902125550000" class="btn btn-white">
+                <a href="tel:+905423949885" class="btn btn-white">
                     <i class="fas fa-phone-alt"></i> Hemen Ara
                 </a>
                 <a href="#contact" class="btn btn-outline-white">
@@ -2562,7 +2570,7 @@
                     </div>
                     <div class="contact-details">
                         <h4>Telefon</h4>
-                        <p>+90 (212) 555 00 00<br>+90 (212) 555 00 01</p>
+                        <p>+90 542 394 98 85</p>
                     </div>
                 </div>
                 <div class="contact-card">
@@ -2571,7 +2579,7 @@
                     </div>
                     <div class="contact-details">
                         <h4>E-Posta</h4>
-                        <p>info@mellkompresor.com<br>satis@mellkompresor.com</p>
+                        <p>info@mellkompresor.com</p>
                     </div>
                 </div>
                 <div class="contact-card">
@@ -2820,7 +2828,6 @@
                 title: 'MELL VS-15 Vidalı Kompresör',
                 content: '15 HP gücünde, kompakt ve ekonomik vidalı kompresör. Küçük ve orta ölçekli işletmeler için ideal çözüm. Düşük bakım maliyeti ve uzun ömür.',
                 specs: ['Güç: 15 HP', 'Basınç: 8 bar', 'Hava Debisi: 2.1 m³/dk', 'Verimlilik: %92', 'Gürültü: 68 dB', 'Garanti: 5 Yıl'],
-                price: '₺89.900 +KDV',
                 code: `// VS-15 Teknik Veriler
 {
   "model": "MELL-VS-15",
@@ -2836,7 +2843,6 @@
                 title: 'MELL VS-30 IE3 Vidalı Kompresör',
                 content: '30 HP IE3 enerji verimli motor ile %40 enerji tasarrufu. Orta ölçekli üretim tesisleri için mükemmel performans.',
                 specs: ['Güç: 30 HP', 'Basınç: 8-10 bar', 'Hava Debisi: 4.5 m³/dk', 'Verimlilik: %95', 'Motor: IE3 Premium', 'Garanti: 5 Yıl'],
-                price: '₺149.900 +KDV',
                 code: `// VS-30 IE3 Teknik Veriler
 {
   "model": "MELL-VS-30-IE3",
@@ -2852,7 +2858,6 @@
                 title: 'MELL VS-75 Vidalı Kompresör',
                 content: '75 HP yağlı vidalı kompresör. Orta ölçekli üretim tesisleri için en çok tercih edilen, güvenilir ve verimli model.',
                 specs: ['Güç: 75 HP', 'Basınç: 8 bar', 'Hava Debisi: 10.5 m³/dk', 'Verimlilik: %95+', 'Motor: IE3', 'Garanti: 5 Yıl'],
-                price: '₺289.900 +KDV',
                 code: `// VS-75 Teknik Veriler
 {
   "model": "MELL-VS-75",
@@ -2868,7 +2873,6 @@
                 title: 'MELL VS-150 Vidalı Kompresör',
                 content: '150 HP yüksek kapasiteli vidalı kompresör. Büyük ölçekli üretim tesisleri için üstün performans ve güvenilirlik.',
                 specs: ['Güç: 150 HP', 'Basınç: 10 bar', 'Hava Debisi: 22 m³/dk', 'Verimlilik: %96', 'Motor: IE3', 'Garanti: 5 Yıl'],
-                price: '₺489.900 +KDV',
                 code: `// VS-150 Teknik Veriler
 {
   "model": "MELL-VS-150",
@@ -2884,7 +2888,6 @@
                 title: 'MELL VS-200 Özel Vidalı Kompresör',
                 content: '200 HP özelleştirilebilir vidalı kompresör. Özel proje çözümleri ve özel basınç ihtiyaçları için tasarlanmıştır.',
                 specs: ['Güç: 200 HP', 'Basınç: Özel (8-13 bar)', 'Hava Debisi: Özel', 'Verimlilik: %96+', 'Motor: IE3/IE4', 'Garanti: 5 Yıl'],
-                price: 'Teklif Alın',
                 code: `// VS-200 Özel Teknik Veriler
 {
   "model": "MELL-VS-200-OZEL",
@@ -2899,7 +2902,6 @@
                 title: 'MELL VS-500 Mega Vidalı Kompresör',
                 content: '500 HP süper güçlü vidalı kompresör. En büyük sanayi tesisleri ve mega projeler için üstün performans.',
                 specs: ['Güç: 500 HP', 'Basınç: 13 bar', 'Hava Debisi: 85 m³/dk', 'Verimlilik: %97', 'Motor: IE4', 'Garanti: 5 Yıl'],
-                price: 'Teklif Alın',
                 code: `// VS-500 Teknik Veriler
 {
   "model": "MELL-VS-500",
@@ -2933,7 +2935,6 @@
                     <a href="#contact" class="btn btn-primary" onclick="closeModal()">
                         <i class="fas fa-phone"></i> Teklif Al
                     </a>
-                    <span style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gold);font-weight:700;">${data.price}</span>
                 </div>
             `;
             
